@@ -1,4 +1,5 @@
 import {bootstrap, Component, FORM_DIRECTIVES,CORE_DIRECTIVES} from 'angular2/angular2';
+import {Hero} from './hero';
 @Component({
 	selector: 'my-app',
 	directives: [FORM_DIRECTIVES,CORE_DIRECTIVES],
@@ -76,22 +77,7 @@ class AppComponent {
 		}
 	}
  }
- 
- class Hero {
-	 static cpt:number = 0;
-	 
-	 id: number;
-	 name: string;
-	 
-	 constructor(name: string) {
-		 this.id = Hero.cpt;
-		 Hero.cpt++;
-		 this.name = name;
-	 }
- }
- 
- 
- 
+
 var HEROES: Hero[] = [
 	new Hero("Rubick"),
 	new Hero("Templar Assassin"),
