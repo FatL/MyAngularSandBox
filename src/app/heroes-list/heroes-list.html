@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+	
+<div>
+	<div class="form-group">
+		Add an Hero to the list<br/>
+		<input #herotoadd>
+		<button class="btn btn-primary" (click)="addHero(herotoadd)">ADD</button>
+	</div>
+</div>
+
+<h2>My Heroes List</h2>
+<ul class="heroes">
+	<li *ng-for="#hero of heroes" 
+		[ng-class]="getSelectedClass(hero)"
+		(click)="onSelect(hero)">
+			<span class="badge">{{hero.id}}</span> {{hero.name}}</a>
+	</li>
+</ul>
+
+<div *ng-if="selectedHero">
+	<h2>{{selectedHero.name}}</h2>
+	<input [(ng-model)]="selectedHero.name" placeholder="name">
+	<button class="btn btn-danger" (click)="removeHero(selectedHero)">REMOVE</button>
+</div>
