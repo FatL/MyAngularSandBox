@@ -2,7 +2,6 @@ import {Component, FORM_DIRECTIVES,CORE_DIRECTIVES} from 'angular2/angular2';
 import {Hero} from './hero';
 
 @Component({
-	selector: 'heroes-list',
 	directives: [FORM_DIRECTIVES,CORE_DIRECTIVES],
 	templateUrl:'./app/heroes-list/heroes-list.html',
 })

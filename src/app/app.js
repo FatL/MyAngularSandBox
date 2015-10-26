@@ -13,19 +13,32 @@ var http_1 = require('angular2/http');
 var angular2_1 = require('angular2/angular2');
 var router_1 = require('angular2/router');
 var heroes_list_1 = require('./heroes-list/heroes-list');
+var rest_call_1 = require('./rest-call/rest-call');
+var forms_1 = require('./forms/forms');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(location) {
+        this.location = location;
     }
+    AppComponent.prototype.getLinkStyle = function (path) {
+        if (path === this.location.path()) {
+            return true;
+        }
+        else if (path.length > 0) {
+            return this.location.path().indexOf(path) > -1;
+        }
+    };
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
             templateUrl: 'app/app.html',
-            directives: ([heroes_list_1.HeroesList, router_1.ROUTER_DIRECTIVES])
+            directives: ([heroes_list_1.HeroesList, rest_call_1.RestCall, router_1.ROUTER_DIRECTIVES])
         }),
         router_1.RouteConfig([
-            new router_1.Route({ path: '/heroes', component: heroes_list_1.HeroesList, as: 'HeroesList' })
+            new router_1.Route({ path: '/heroes', component: heroes_list_1.HeroesList, as: 'HeroesList' }),
+            new router_1.Route({ path: '/rest', component: rest_call_1.RestCall, as: 'RestCall' }),
+            new router_1.Route({ path: '/forms', component: forms_1.Forms, as: 'Forms' })
         ]), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Location])
     ], AppComponent);
     return AppComponent;
 })();

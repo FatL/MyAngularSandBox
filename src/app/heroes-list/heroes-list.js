@@ -39,7 +39,6 @@ var HeroesList = (function () {
     };
     HeroesList = __decorate([
         angular2_1.Component({
-            selector: 'heroes-list',
             directives: [angular2_1.FORM_DIRECTIVES, angular2_1.CORE_DIRECTIVES],
             templateUrl: './app/heroes-list/heroes-list.html',
         }), 
