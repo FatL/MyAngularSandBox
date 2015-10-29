@@ -21,7 +21,7 @@ export class HeroesList {
 	
 	addHero(heroToAdd) {
 		if(heroToAdd.value) {
-			this.heroes.push(new Hero(heroToAdd.value));
+			this.heroes.push(new Hero(heroToAdd.value,"TBD"));
 			heroToAdd.value=null; // Display cleaning
 		}
 	}
@@ -38,14 +38,14 @@ export class HeroesList {
  }
 
 var HEROES: Hero[] = [
-	new Hero("Rubick"),
-	new Hero("Templar Assassin"),
-	new Hero("Silencer"),
-	new Hero("Crystal Maiden"),
-	new Hero("Magnus"),
-	new Hero("Undying"),
-	new Hero("Disruptor"),
-	new Hero("Jakiro"),
-	new Hero("Lich"),
-	new Hero("Oracle")
+	new Hero("Rubick","Intel"),
+	new Hero("Templar Assassin","Agi"),
+	new Hero("Silencer","Intel"),
+	new Hero("Crystal Maiden","Intel"),
+	new Hero("Magnus","Strength"),
+	new Hero("Undying", "Intel"),
+	new Hero("Disruptor", "Intel"),
+	new Hero("Jakiro", "Intel"),
+	new Hero("Lich", "Intel"),
+	new Hero("Oracle", "Intel")
 ];

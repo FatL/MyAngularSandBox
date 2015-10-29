@@ -10,9 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var hero_1 = require('../heroes-list/hero');
 var Forms = (function () {
     function Forms() {
+        this.hero = new hero_1.Hero('Riki', 'Agi');
+        this.typeList = [['Str', 'Strength'], ['Agi', 'Agility'], ['Int', 'Intelligence']];
     }
+    Forms.prototype.onSubmit = function () {
+        console.log(this.hero.name + " : " + this.hero.type);
+    };
     Forms = __decorate([
         angular2_1.Component({
             directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES],

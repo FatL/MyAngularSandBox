@@ -12,3 +12,5 @@
 	top: -1px;
 }
 .selected { background-color: #EEE; color: #369; }
+.ng-valid[required] { border-left: 5px solid #42A948; }
+.ng-invalid { border-left: 5px solid #a94442; }

@@ -24,7 +24,7 @@ var HeroesList = (function () {
     };
     HeroesList.prototype.addHero = function (heroToAdd) {
         if (heroToAdd.value) {
-            this.heroes.push(new hero_1.Hero(heroToAdd.value));
+            this.heroes.push(new hero_1.Hero(heroToAdd.value, "TBD"));
             heroToAdd.value = null; // Display cleaning
         }
     };
@@ -48,15 +48,15 @@ var HeroesList = (function () {
 })();
 exports.HeroesList = HeroesList;
 var HEROES = [
-    new hero_1.Hero("Rubick"),
-    new hero_1.Hero("Templar Assassin"),
-    new hero_1.Hero("Silencer"),
-    new hero_1.Hero("Crystal Maiden"),
-    new hero_1.Hero("Magnus"),
-    new hero_1.Hero("Undying"),
-    new hero_1.Hero("Disruptor"),
-    new hero_1.Hero("Jakiro"),
-    new hero_1.Hero("Lich"),
-    new hero_1.Hero("Oracle")
+    new hero_1.Hero("Rubick", "Intel"),
+    new hero_1.Hero("Templar Assassin", "Agi"),
+    new hero_1.Hero("Silencer", "Intel"),
+    new hero_1.Hero("Crystal Maiden", "Intel"),
+    new hero_1.Hero("Magnus", "Strength"),
+    new hero_1.Hero("Undying", "Intel"),
+    new hero_1.Hero("Disruptor", "Intel"),
+    new hero_1.Hero("Jakiro", "Intel"),
+    new hero_1.Hero("Lich", "Intel"),
+    new hero_1.Hero("Oracle", "Intel")
 ];
 //# sourceMappingURL=heroes-list.js.map

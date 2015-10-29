@@ -1,8 +1,9 @@
 var Hero = (function () {
-    function Hero(name) {
+    function Hero(name, type) {
         this.id = Hero.cpt;
         Hero.cpt++;
         this.name = name;
+        this.type = type;
     }
     Hero.cpt = 0;
     return Hero;
