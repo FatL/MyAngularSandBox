@@ -15,6 +15,7 @@ var router_1 = require('angular2/router');
 var heroes_list_1 = require('./heroes-list/heroes-list');
 var rest_call_1 = require('./rest-call/rest-call');
 var forms_1 = require('./forms/forms');
+var heroes_service_1 = require('./heroes-list/heroes-service');
 var AppComponent = (function () {
     function AppComponent(location) {
         this.location = location;
@@ -42,5 +43,5 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 })();
-angular2_1.bootstrap(AppComponent, [router_1.ROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, angular2_1.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy })]);
+angular2_1.bootstrap(AppComponent, [heroes_service_1.HeroesService, router_1.ROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, angular2_1.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy })]);
 //# sourceMappingURL=app.js.map

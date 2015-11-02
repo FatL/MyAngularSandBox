@@ -1,15 +1,21 @@
 import {Component, FORM_DIRECTIVES,CORE_DIRECTIVES} from 'angular2/angular2';
 import {Hero} from './hero';
+import {HeroesService} from './heroes-service';
 
 @Component({
 	directives: [FORM_DIRECTIVES,CORE_DIRECTIVES],
 	templateUrl:'./app/heroes-list/heroes-list.html',
+	providers:[HeroesService]
 })
 
 export class HeroesList {
 	public title = 'DOTA 2';
 	public selectedHero: Hero;
-	public heroes = HEROES;
+	public heroes;
+	
+	constructor(heroesService:HeroesService) {
+		this.heroes = heroesService.getHeroes();
+	}
 	
 	onSelect(hero: Hero) {
 		this.selectedHero = hero;
@@ -36,16 +42,3 @@ export class HeroesList {
 		}
 	}
  }
-
-var HEROES: Hero[] = [
-	new Hero("Rubick","Intel"),
-	new Hero("Templar Assassin","Agi"),
-	new Hero("Silencer","Intel"),
-	new Hero("Crystal Maiden","Intel"),
-	new Hero("Magnus","Strength"),
-	new Hero("Undying", "Intel"),
-	new Hero("Disruptor", "Intel"),
-	new Hero("Jakiro", "Intel"),
-	new Hero("Lich", "Intel"),
-	new Hero("Oracle", "Intel")
-];

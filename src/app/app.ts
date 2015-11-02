@@ -4,6 +4,7 @@ import {ROUTER_DIRECTIVES, Location, LocationStrategy, HashLocationStrategy, ROU
 import {HeroesList} from './heroes-list/heroes-list';
 import {RestCall} from './rest-call/rest-call';
 import {Forms} from './forms/forms';
+import {HeroesService} from './heroes-list/heroes-service';
 
 @Component({
 	selector: 'my-app',
@@ -35,4 +36,4 @@ class AppComponent {
     }
 }
 
-bootstrap(AppComponent, [ROUTER_PROVIDERS, HTTP_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
+bootstrap(AppComponent, [HeroesService,ROUTER_PROVIDERS, HTTP_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);

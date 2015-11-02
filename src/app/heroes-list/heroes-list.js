@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var hero_1 = require('./hero');
+var heroes_service_1 = require('./heroes-service');
 var HeroesList = (function () {
-    function HeroesList() {
+    function HeroesList(heroesService) {
         this.title = 'DOTA 2';
-        this.heroes = HEROES;
+        this.heroes = heroesService.getHeroes();
     }
     HeroesList.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
@@ -41,22 +42,11 @@ var HeroesList = (function () {
         angular2_1.Component({
             directives: [angular2_1.FORM_DIRECTIVES, angular2_1.CORE_DIRECTIVES],
             templateUrl: './app/heroes-list/heroes-list.html',
+            providers: [heroes_service_1.HeroesService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [heroes_service_1.HeroesService])
     ], HeroesList);
     return HeroesList;
 })();
 exports.HeroesList = HeroesList;
-var HEROES = [
-    new hero_1.Hero("Rubick", "Intel"),
-    new hero_1.Hero("Templar Assassin", "Agi"),
-    new hero_1.Hero("Silencer", "Intel"),
-    new hero_1.Hero("Crystal Maiden", "Intel"),
-    new hero_1.Hero("Magnus", "Strength"),
-    new hero_1.Hero("Undying", "Intel"),
-    new hero_1.Hero("Disruptor", "Intel"),
-    new hero_1.Hero("Jakiro", "Intel"),
-    new hero_1.Hero("Lich", "Intel"),
-    new hero_1.Hero("Oracle", "Intel")
-];
 //# sourceMappingURL=heroes-list.js.map
