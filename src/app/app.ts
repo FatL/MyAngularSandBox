@@ -13,9 +13,9 @@ import {HeroesService} from './heroes-list/heroes-service';
 })
 
 @RouteConfig([
-	new Route({path:'/heroes', component: HeroesList, as:'HeroesList'}),
-    new Route({path:'/rest', component: RestCall, as:'RestCall'}),
-    new Route({path:'/forms', component: Forms, as:'Forms'})
+	new Route({path:'/heroes', component: HeroesList, name:'HeroesList'}),
+    new Route({path:'/rest', component: RestCall, name:'RestCall'}),
+    new Route({path:'/forms', component: Forms, name:'Forms'})
 ])
 
 class AppComponent {

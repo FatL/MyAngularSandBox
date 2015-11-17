@@ -35,9 +35,9 @@ var AppComponent = (function () {
             directives: ([heroes_list_1.HeroesList, rest_call_1.RestCall, router_1.ROUTER_DIRECTIVES])
         }),
         router_1.RouteConfig([
-            new router_1.Route({ path: '/heroes', component: heroes_list_1.HeroesList, as: 'HeroesList' }),
-            new router_1.Route({ path: '/rest', component: rest_call_1.RestCall, as: 'RestCall' }),
-            new router_1.Route({ path: '/forms', component: forms_1.Forms, as: 'Forms' })
+            new router_1.Route({ path: '/heroes', component: heroes_list_1.HeroesList, name: 'HeroesList' }),
+            new router_1.Route({ path: '/rest', component: rest_call_1.RestCall, name: 'RestCall' }),
+            new router_1.Route({ path: '/forms', component: forms_1.Forms, name: 'Forms' })
         ]), 
         __metadata('design:paramtypes', [router_1.Location])
     ], AppComponent);
